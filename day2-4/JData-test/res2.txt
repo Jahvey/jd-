@@ -1,0 +1,194 @@
+Python 3.6.0 |Anaconda 4.3.1 (64-bit)| (default, Dec 23 2016, 11:57:41) [MSC v.1900 64 bit (AMD64)]
+Type "copyright", "credits" or "license" for more information.
+
+IPython 5.1.0 -- An enhanced Interactive Python.
+?         -> Introduction and overview of IPython's features.
+%quickref -> Quick reference.
+help      -> Python's own help system.
+object?   -> Details about 'object', use 'object??' for extra details.
+
+Restarting kernel... 
+
+
+ 
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+1
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+Traceback (most recent call last):
+
+  File "<ipython-input-2-4e3e79a10947>", line 1, in <module>
+    runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\spyder\utils\site\sitecustomize.py", line 866, in runfile
+    execfile(filename, namespace)
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\spyder\utils\site\sitecustomize.py", line 102, in execfile
+    exec(compile(f.read(), filename, 'exec'), namespace)
+
+  File "G:/大数据竞赛/JData-master/explore_data.py", line 99, in <module>
+    tranform_user_age()
+
+  File "G:/大数据竞赛/JData-master/explore_data.py", line 39, in tranform_user_age
+    df = pd.read_csv(USER_FILE, header=0, encoding="gbk")
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 646, in parser_f
+    return _read(filepath_or_buffer, kwds)
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 389, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 730, in __init__
+    self._make_engine(self.engine)
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 923, in _make_engine
+    self._engine = CParserWrapper(self.f, **self.options)
+
+  File "e:\ProgramData\Anaconda3\lib\site-packages\pandas\io\parsers.py", line 1390, in __init__
+    self._reader = _parser.TextReader(src, **kwds)
+
+  File "pandas\parser.pyx", line 373, in pandas.parser.TextReader.__cinit__ (pandas\parser.c:4184)
+
+  File "pandas\parser.pyx", line 667, in pandas.parser.TextReader._setup_parser_source (pandas\parser.c:8449)
+
+FileNotFoundError: File b'data/JData_User.csv' does not exist
+
+
+%clear
+
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+Write Data From user to new_user complete!!
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+   user_id  age   sex  user_lv_cd user_reg_tm  user_reg_diff
+0   200001    5 2.000           5  2016-01-26      4,607.000
+1   200002   -1 0.000           1  2016-01-26      4,607.000
+2   200003    3 1.000           4  2016-01-26      4,607.000
+3   200004   -1 2.000           1  2016-01-26      4,607.000
+4   200005    1 0.000           4  2016-01-26      4,607.000
+          user_id         age         sex  user_lv_cd  user_reg_diff
+count 105,321.000 105,321.000 105,318.000 105,321.000    105,318.000
+mean  252,661.000       1.910       1.113       3.850      3,638.213
+std    30,403.698       1.372       0.956       1.072        722.057
+min   200,001.000      -1.000       0.000       1.000          0.000
+25%   226,331.000       2.000       0.000       3.000      3,129.000
+50%   252,661.000       2.000       2.000       4.000      3,701.000
+75%   278,991.000       3.000       2.000       5.000      4,273.000
+max   305,321.000       5.000       2.000       5.000      4,911.000
+user_id            int64
+age                int64
+sex              float64
+user_lv_cd         int64
+user_reg_tm       object
+user_reg_diff    float64
+dtype: object
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+Iteration is stopped
+      user_id  sku_id                 time  model_id  type  cate  brand
+0 266,079.000  138778  2016-01-31 23:59:02       nan     1     8    403
+1 266,079.000  138778  2016-01-31 23:59:03     0.000     6     8    403
+2 200,719.000   61226  2016-01-31 23:59:07       nan     1     8     30
+3 200,719.000   61226  2016-01-31 23:59:08     0.000     6     8     30
+4 263,587.000   72348  2016-01-31 23:59:08       nan     1     5    159
+user_id     float64
+sku_id        int64
+time         object
+model_id    float64
+type          int64
+cate          int64
+brand         int64
+dtype: object
+Empty DataFrame
+Columns: [user_id, sku_id, time, model_id, type, cate, brand]
+Index: []
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+  File "G:/大数据竞赛/JData-master/explore_data.py", line 95
+    print(df[df["user_id"] == 266,079])
+                                    ^
+SyntaxError: invalid token
+
+
+runfile('G:/大数据竞赛/JData-master/explore_data.py', wdir='G:/大数据竞赛/JData-master')
+Iteration is stopped
+      user_id  sku_id                 time  model_id  type  cate  brand
+0 266,079.000  138778  2016-01-31 23:59:02       nan     1     8    403
+1 266,079.000  138778  2016-01-31 23:59:03     0.000     6     8    403
+2 200,719.000   61226  2016-01-31 23:59:07       nan     1     8     30
+3 200,719.000   61226  2016-01-31 23:59:08     0.000     6     8     30
+4 263,587.000   72348  2016-01-31 23:59:08       nan     1     5    159
+user_id     float64
+sku_id        int64
+time         object
+model_id    float64
+type          int64
+cate          int64
+brand         int64
+dtype: object
+             user_id  sku_id                 time  model_id  type  cate  brand
+0        266,079.000  138778  2016-01-31 23:59:02       nan     1     8    403
+1        266,079.000  138778  2016-01-31 23:59:03     0.000     6     8    403
+15       266,079.000  138778  2016-01-31 23:59:40     0.000     6     8    403
+69       266,079.000  151327  2016-02-01 00:00:12       nan     1     8    403
+70       266,079.000  151327  2016-02-01 00:00:13     0.000     6     8    403
+103      266,079.000    5825  2016-02-01 00:00:19     0.000     6     8    885
+104      266,079.000    5825  2016-02-01 00:00:19       nan     1     8    885
+123      266,079.000    5825  2016-02-01 00:00:22    17.000     6     8    885
+275      266,079.000  151327  2016-02-01 00:00:46    14.000     6     8    403
+332      266,079.000    5825  2016-02-01 00:00:56    14.000     6     8    885
+417      266,079.000  115851  2016-02-01 00:01:10       nan     1     8    885
+419      266,079.000  115851  2016-02-01 00:01:11     0.000     6     8    885
+455      266,079.000  147796  2016-02-01 00:01:20       nan     1     8    489
+462      266,079.000  147796  2016-02-01 00:01:22     0.000     6     8    489
+525      266,079.000  147796  2016-02-01 00:01:35     0.000     6     8    489
+704      266,079.000   88975  2016-02-01 00:02:11       nan     1     8    214
+707      266,079.000   88975  2016-02-01 00:02:12     0.000     6     8    214
+824      266,079.000   88975  2016-02-01 00:02:23    17.000     6     8    214
+909      266,079.000   20308  2016-02-01 00:02:43     0.000     6     8    306
+919      266,079.000   20308  2016-02-01 00:02:43       nan     1     8    306
+8733     266,079.000   20308  2016-02-01 00:27:27       nan     1     8    306
+8734     266,079.000   20308  2016-02-01 00:27:28     0.000     6     8    306
+8802     266,079.000  115851  2016-02-01 00:27:39       nan     1     8    885
+8810     266,079.000  115851  2016-02-01 00:27:39     0.000     6     8    885
+8953     266,079.000   95735  2016-02-01 00:28:14       nan     1     8    427
+8959     266,079.000   95735  2016-02-01 00:28:15     0.000     6     8    427
+9353     266,079.000   95735  2016-02-01 00:29:45    17.000     6     8    427
+9357     266,079.000   95735  2016-02-01 00:29:46    17.000     6     8    427
+9361     266,079.000   95735  2016-02-01 00:29:46    17.000     6     8    427
+9449     266,079.000   95735  2016-02-01 00:30:02     0.000     6     8    427
+             ...     ...                  ...       ...   ...   ...    ...
+5564375  266,079.000    5825  2016-02-18 09:27:29    13.000     6     8    885
+5564388  266,079.000    5825  2016-02-18 09:27:31     0.000     6     8    885
+5564389  266,079.000    5825  2016-02-18 09:27:31     0.000     6     8    885
+5767718  266,079.000    5825  2016-02-18 17:58:53       nan     1     8    885
+5767722  266,079.000    5825  2016-02-18 17:58:54     0.000     6     8    885
+8276040  266,079.000    5825  2016-02-23 21:35:01       nan     1     8    885
+8276051  266,079.000    5825  2016-02-23 21:35:02     0.000     6     8    885
+8276053  266,079.000    5825  2016-02-23 21:35:02     0.000     6     8    885
+8276574  266,079.000    5825  2016-02-23 21:35:43     0.000     6     8    885
+8989024  266,079.000    5825  2016-02-25 12:41:00       nan     1     8    885
+8989029  266,079.000    5825  2016-02-25 12:41:00     0.000     6     8    885
+8989031  266,079.000    5825  2016-02-25 12:41:00     0.000     6     8    885
+8989095  266,079.000    5825  2016-02-25 12:41:09     0.000     6     8    885
+8991693  266,079.000    5825  2016-02-25 12:46:41     0.000     6     8    885
+9585223  266,079.000   20308  2016-02-26 17:01:00       nan     3     8    306
+9585269  266,079.000   17666  2016-02-26 17:01:07       nan     3     8    306
+9602036  266,079.000    5825  2016-02-26 17:44:33       nan     1     8    885
+9602044  266,079.000    5825  2016-02-26 17:44:35     0.000     6     8    885
+9602052  266,079.000    5825  2016-02-26 17:44:36     0.000     6     8    885
+9773723  266,079.000    5825  2016-02-26 23:13:28       nan     1     8    885
+9773728  266,079.000    5825  2016-02-26 23:13:28     0.000     6     8    885
+9773730  266,079.000    5825  2016-02-26 23:13:28     0.000     6     8    885
+9773800  266,079.000    5825  2016-02-26 23:13:42     0.000     6     8    885
+11320735 266,079.000    5825  2016-02-29 20:28:49       nan     1     8    885
+11320740 266,079.000    5825  2016-02-29 20:28:49       nan     1     8    885
+11321167 266,079.000    5825  2016-02-29 20:29:22    24.000     6     8    885
+11321173 266,079.000    5825  2016-02-29 20:29:22   218.000     6     8    885
+11321174 266,079.000    5825  2016-02-29 20:29:22    24.000     6     8    885
+11321179 266,079.000    5825  2016-02-29 20:29:22    24.000     6     8    885
+11321183 266,079.000    5825  2016-02-29 20:29:22     0.000     6     8    885
+
+[395 rows x 7 columns]
