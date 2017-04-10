@@ -1,0 +1,1 @@
+user_id,sku_id,time,model_id,type,cate,brand
